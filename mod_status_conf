@@ -1,0 +1,11 @@
+<IfModule mod_status.c>
+ExtendedStatus On
+<Location /server-status>
+    SetHandler server-status
+    Order allow,deny
+    Allow from 192.168.20
+    Allow from 192.168.200.128
+    Allow from 127.0.0.1
+    #Deny from All
+</Location>
+</IfModule>
